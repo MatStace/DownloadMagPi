@@ -1,3 +1,10 @@
+I took Ben's Script from https://github.com/BenScarb/DownloadMagPi and knocked up a quick Dockerfile so I could run it on my Synology NAS without worrying about messing up/creating conflicts for python and dependencies.
+
+You can run it with the following docker one-liner (add in the path you want the files downloaded to where it says `/YOUR/PATH/HERE` )
+
+```docker run -it --rm -v /YOUR/PATH/HERE:/downloaded --name magpi-hoard  matstace/downloadmagpi```
+
+-------------------------
 # DownloadMagPi
 Simple Python Script to download the main MagPi magazine (Windows, Linux and Mac)
 

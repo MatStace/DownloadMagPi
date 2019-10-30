@@ -6,9 +6,9 @@ import os
 # Debug setting
 debug = False
 
-# Place to put the files (Yes, I developed it on windows!)
-# CHANGE THIS FOR YOUR OWN PATH
-output_dir = "D:\\MagPi\\"
+# Place to put the files 
+# MOUNT A DOCKER VOLUME HERE
+output_dir = "/downloaded"
 
 # URLs for all the Raspberry Pi Foundation Free magazines and books
 # With a locaiton and template filename
@@ -30,7 +30,7 @@ def GetPage(url):
     try:
         r = requests.get(url, allow_redirects=True)
         if debug:
-            open('D:\\Page_' + str(fileNo) + '.txt', 'wb').write(r.content)
+            open('/downloaded/Page_' + str(fileNo) + '.txt', 'wb').write(r.content)
             fileNo += 1
         page = r.content
     except Exception as err:
