@@ -9,7 +9,7 @@ debug = False
 # Do you want to check for all back issues as well?
 doBackIssues = True
 
-# Place to put the files (Yes, I developed it on windows!)
+# Place to put the files 
 # MOUNT A DOCKER VOLUME HERE
 output_dir = "/downloaded"
 
